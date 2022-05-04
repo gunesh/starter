@@ -54,7 +54,7 @@ function App() {
               {/* <Route path="/" element={<PrivateOutlet />}>
                 <Route element={<HomePage />} />
               </Route> */}
-               <Route path="login" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="login" element={<LoginPage />} />
               <Route path="register" element={<RegisterPage />} />
             </Routes>
