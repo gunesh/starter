@@ -48,20 +48,13 @@ function App() {
           {alert.message && (
             <div className={`alert ${alert.type}`}>{alert.message}</div>
           )}
-          {/* <Router history={history}>
-            <Switch>
-              <PrivateRoute exact path="/" component={HomePage} />
-              <Route path="/login" component={LoginPage} />
-              <Route path="/register" component={RegisterPage} />
-              <Redirect from="*" to="/" />
-            </Switch>
-          </Router> */}
 
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<PrivateOutlet />}>
+              {/* <Route path="/" element={<PrivateOutlet />}>
                 <Route element={<HomePage />} />
-              </Route>
+              </Route> */}
+               <Route path="login" element={<HomePage />} />
               <Route path="login" element={<LoginPage />} />
               <Route path="register" element={<RegisterPage />} />
             </Routes>
