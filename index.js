@@ -1,15 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-
-import { store } from './_helpers';
+import { store } from './redux';
 import { App } from './App';
 
-// setup fake backend
-import { configureFakeBackend } from './_helpers';
-configureFakeBackend();
 const container = document.getElementById('app');
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
+const root = createRoot(container);
 root.render(
   <Provider store={store}>
     <App />
