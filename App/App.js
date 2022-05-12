@@ -15,50 +15,23 @@ import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
 
-function PrivateOutlet(props) {
-  return localStorage.getItem('user') ? (
-    <>
-      {console.log('Im ')}
-      <Outlet />
-      {props.Children}
-    </>
-  ) : (
-    <>
-      {console.log('You r')}
-      <Navigate to="/login" />
-    </>
-  );
-}
-
 function App() {
   const alert = useSelector((state) => state.alert);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    history.listen((location, action) => {
-      // clear alert on location change
-      dispatch(alertActions.clear());
-    });
+    console.log('Component Mount');
   }, []);
 
   return (
     <div className="jumbotron">
       <div className="container">
         <div className="col-md-8 offset-md-2">
-          {alert.message && (
+          {/* {alert.message && (
             <div className={`alert ${alert.type}`}>{alert.message}</div>
-          )}
+          )} */}
 
-          <BrowserRouter>
-            <Routes>
-              {/* <Route path="/" element={<PrivateOutlet />}>
-                <Route element={<HomePage />} />
-              </Route> */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="login" element={<LoginPage />} />
-              <Route path="register" element={<RegisterPage />} />
-            </Routes>
-          </BrowserRouter>
+          <HomePage />
         </div>
       </div>
     </div>
