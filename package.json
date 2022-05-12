@@ -1,11 +1,10 @@
 {
-  "name": "react-redux-registration-login-example",
+  "name": "react-redux",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",
-    "https:": "*",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": ">=0.59",
